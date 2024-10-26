@@ -1,28 +1,28 @@
-name: Python package
+# .github/workflows/python-app.yml
+
+name: Python application
 
 on: [push, pull_request]
 
 jobs:
   build:
+
     runs-on: ubuntu-latest
 
     steps:
-    - name: Check out repository
+    - name: Checkout repository
       uses: actions/checkout@v2
 
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        python-version: '3.11'  # Use a mesma versão que você usa localmente
+        python-version: '3.9'  # Altere para a versão desejada
 
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install pytest
-
-    - name: List test directory
-      run: ls -R tests/  # Liste os arquivos para verificar se eles estão lá
+        pip install -r requirements.txt
 
     - name: Run tests
       run: |
-        pytest tests/  # Execute os testes na pasta tests
+        pytest
