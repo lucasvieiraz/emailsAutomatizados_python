@@ -20,4 +20,4 @@ jobs:
 
     - name: Run tests
       run: |
-        pytest tests/  # Especifique a pasta onde estão os testes
+        pytest \tests\test.py
