@@ -26,3 +26,4 @@ def enviar_email(usuario, senha, destinatario, assunto, texto, arquivo):
 
     servidor.send_message(msg)
     servidor.quit()
+    
