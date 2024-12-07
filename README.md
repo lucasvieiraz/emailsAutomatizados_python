@@ -46,7 +46,7 @@ Para Gmail, ative a opção "Permitir apps menos seguros" ou crie uma senha de a
 
 Biblioteca necessária:
 
-'''bash
-Copiar código
+```bash
+
 pip install secure-smtplib
-'''
+```
